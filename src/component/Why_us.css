@@ -1,0 +1,127 @@
+/* Why_us.css */
+.whyus {
+  width: 100vw;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.whyus__heading {
+  color: #fff;
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.whyus__cards {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+.whyus__card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(220,38,38,0.09);
+  padding: 1.5rem 1.1rem 1.1rem 1.1rem;
+  flex: 1 1 220px;
+  max-width: 260px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  min-height: 200px;
+  height: auto;
+}
+.whyus__card:hover {
+  box-shadow: 0 8px 32px rgba(220,38,38,0.18);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.whyus__icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2.2rem auto 0.8rem auto;
+  box-shadow: 0 2px 12px rgba(220,38,38,0.13);
+  font-size: 1.5rem;
+}
+
+.whyus__card-title {
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.whyus__card-desc {
+  color: #555;
+  font-size: 0.98rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  min-height: 48px;
+}
+
+.whyus__learn-more {
+  color: #dc2626;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.whyus__learn-more:hover,
+.whyus__learn-more:focus {
+  color: #b91c1c;
+  border-bottom: 1px solid #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .whyus__cards {
+    gap: 0.7rem;
+    max-width: 98vw;
+  }
+  .whyus__card {
+    min-width: 140px;
+    max-width: 98vw;
+    padding: 1.1rem 0.7rem 0.9rem 0.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .whyus__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .whyus__card {
+    width: 90vw;
+    min-width: 0;
+    max-width: 98vw;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,163 @@
+
+.home-hero {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0,0,0,0.55) 60%, rgba(32,178,170,0.45) 100%);
+  z-index: 1;
+}
+
+.home-center-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.home-tagline {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.home-subtagline {
+  color: #f7f8fa;
+  font-size: 1.3rem;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+
+.home-searchbar {
+  display: flex;
+  gap: 1.1rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(32,178,170,0.13);
+  padding: 0.7rem 1.2rem;
+  align-items: center;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.home-input-group {
+  position: relative; /* Needed for the suggestions dropdown */
+  display: flex;
+  align-items: center;
+  background: #f7f8fa;
+  border-radius: 1.2rem;
+  padding: 0.3rem 1rem;
+  box-shadow: 0 2px 8px rgba(32,178,170,0.06);
+  margin-right: 0.2rem;
+}
+
+.home-input-icon {
+  color: #20B2AA;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+.home-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.08rem;
+  padding: 0.5rem 0;
+  min-width: 90px;
+  color: #222;
+  font-family: inherit;
+}
+
+.home-search-btn {
+  background: #2D5F3F;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 2.2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  box-shadow: 0 2px 8px rgba(158, 183, 181, 0.1);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.home-search-btn:hover,
+.home-search-btn:focus {
+  background: #20B2AA;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Suggestions Dropdown */
+.home-suggestions-list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  z-index: 100;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+}
+
+.home-suggestions-list li {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+  color: #333;
+}
+
+.home-suggestions-list li strong {
+  font-weight: 700;
+  color: #20B2AA;
+}
+
+.home-suggestions-list li.suggestion-active,
+.home-suggestions-list li:hover {
+  background-color: #f0f8ff;
+}
+
+
+@media (max-width: 900px) {
+  .home-tagline {
+    font-size: 2rem;
+  }
+  .home-searchbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding: 1.2rem 1rem;
+  }
+  .home-input-group {
+    margin-right: 0;
+  }
+  .home-search-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,173 @@
+.footer {
+        background: #2D5F3F;
+        color: #f7f8fa;
+        padding: 3.5rem 0 0 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+      }
+      .footer__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2vw;
+        justify-content: space-between;
+      }
+      .footer__section {
+        flex: 1 1 220px;
+        min-width: 200px;
+        margin-bottom: 2.5rem;
+      }
+      .footer__brand {
+        max-width: 320px;
+      }
+      .footer__title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fcc61d; 
+        margin-bottom: 0.7rem;
+        letter-spacing: 1px;
+      }
+      .footer__tagline {
+        font-size: 1.05rem;
+        color: #e5e7eb;
+        line-height: 1.6;
+      }
+      .footer__heading {
+        font-size: 1.13rem;
+        font-weight: bold;
+        color: #fcc61d; /* Yellow accent */
+        margin-bottom: 0.8rem;
+        letter-spacing: 1px;
+      }
+      .footer__links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer__link {
+        color: #f7f8fa;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.6rem;
+        font-size: 1.01rem;
+        position: relative;
+        transition: color 0.3s;
+        outline: none;
+      }
+      .footer__link:focus,
+      .footer__link:hover {
+        color: #20B2AA;
+        text-decoration: underline;
+      }
+      .footer__newsletter-desc {
+        color: #e5e7eb;
+        font-size: 0.98rem;
+        margin-bottom: 0.7rem;
+      }
+      .footer__form {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.7rem;
+      }
+      .footer__input {
+        flex: 1 1 120px;
+        padding: 0.6rem 1rem;
+        border-radius: 22px;
+        border: none;
+        font-size: 1rem;
+        outline: none;
+        background: #D4A574;
+        color: #f7f8fa;
+        transition: box-shadow 0.2s;
+        box-shadow: 0 2px 8px #20b2aa22;
+      }
+      .footer__input:focus {
+        box-shadow: 0 4px 18px #20b2aa55;
+      }
+      .footer__btn {
+        background: #fcc61d;
+        color: #222b3a;
+        border: none;
+        border-radius: 22px;
+        padding: 0.6rem 1.3rem;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px #20b2aa22;
+      }
+      .footer__btn:hover,
+      .footer__btn:focus {
+        background: #20B2AA;
+        color: #fff;
+        transform: translateY(-2px) scale(1.04);
+      }
+      .footer__msg {
+        font-size: 0.99rem;
+        margin-top: 0.2rem;
+        padding-left: 2px;
+      }
+      .footer__msg--success {
+        color: #22c55e;
+      }
+      .footer__msg--error {
+        color: #dc2626;
+      }
+      .footer__bottom {
+        border-top: 1px solid #3338A0;
+        padding: 1.2rem 2vw 1.2rem 2vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.98rem;
+        color: #bdbdbd;
+        background: #222b3a;
+      }
+      .footer__legal {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+      }
+      .footer__legal-link {
+        color: #bdbdbd;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-size: 0.97rem;
+      }
+      .footer__legal-link:hover,
+      .footer__legal-link:focus {
+        color: #fcc61d;
+        text-decoration: underline;
+      }
+      @media (max-width: 900px) {
+        .footer__container {
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+        .footer__section {
+          min-width: 160px;
+        }
+      }
+      @media (max-width: 700px) {
+        .footer__container {
+          flex-direction: column;
+          gap: 2.2rem;
+          padding: 0 4vw;
+        }
+        .footer__section {
+          min-width: 0;
+          margin-bottom: 1.2rem;
+        }
+        .footer__instagrid {
+          grid-template-columns: repeat(3, 28px);
+          grid-template-rows: repeat(2, 28px);
+        }
+        .footer__bottom {
+          flex-direction: column;
+          gap: 0.7rem;
+          font-size: 0.93rem;
+        }
+      }

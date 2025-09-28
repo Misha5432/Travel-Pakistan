@@ -1,0 +1,138 @@
+.contact-section {
+  background: #FEFCF8;
+  padding: 60px 0;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(51,56,160,0.08);
+  padding: 2.5rem 2rem;
+  min-width: 320px;
+  flex: 1 1 340px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-heading {
+  color: #2D5F3F;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subheading {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.contact-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-field label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+}
+
+.contact-error {
+  color: #d32f2f;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.contact-submit {
+  background: #2D5F3F;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 2.2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.contact-submit:hover {
+  background: #20B2AA;
+  color: #222;
+}
+
+.contact-success {
+  color: #388e3c;
+  margin-top: 1rem;
+}
+
+.contact-info-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(51,56,160,0.13);
+  padding: 2.5rem 2rem;
+  min-width: 260px;
+  flex: 1 1 260px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+.contact-info-label {
+  font-weight: 500;
+  color: #3338a0;
+}
+
+.contact-info-value {
+  margin-left: 2.2rem;
+  color: #444;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .contact-form, .contact-info-card {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;}
+}

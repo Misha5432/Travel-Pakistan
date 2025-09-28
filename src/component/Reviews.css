@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+.reviews-section {
+  position: relative;
+  padding: 6rem 0;
+  background-image: url('https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  color: #fff;
+}
+
+.reviews-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.reviews-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.reviews-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.reviews-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #E0E0E0;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0 1.5rem 0; /* Add some padding for aesthetics and scrollbar */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS */
+  text-align: left;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.reviews-grid::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+/* Individual Review Card */
+.review-card {
+  flex: 0 0 320px; /* Give cards a fixed width so they don't shrink */
+  scroll-snap-align: start; /* Snap to the start of each card */
+  background-color: #FFFFFF;
+  color: #2C3E50;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.review-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.reviewer-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid #F4A261;
+}
+
+.reviewer-info {
+  flex-grow: 1;
+}
+
+.reviewer-name {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+  color: #2C3E50;
+}
+
+.review-date {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: #7F8C8D;
+  margin: 0;
+}
+
+.google-logo {
+  font-size: 1.5rem;
+  color: #DB4437;
+}
+
+/* Card Body */
+.review-card-body {
+  flex-grow: 1;
+}
+
+.rating-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 16px;
+}
+
+.verified-badge {
+  font-size: 1.2rem;
+  color: #1DA1F2;
+  margin-left: 0.5rem;
+}
+
+.review-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #F4A261;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Scroll Arrows */
+.scroll-arrows {
+  display: none; /* Hidden by default, shown on larger screens */
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 10;
+}
+
+.scroll-arrow:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-arrow.left {
+  left: 0;
+}
+
+.scroll-arrow.right {
+  right: 0;
+}
+
+.scroll-arrow svg {
+  font-size: 1.2rem;
+  color: #2C3E50;
+}
+
+
+/* Responsive Design */
+@media (min-width: 1025px) {
+  .scroll-arrows {
+    display: block;
+  }
+
+  .reviews-container {
+    padding: 0 3rem; /* Add padding to make space for arrows */
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-main-title {
+    font-size: 2.5rem;
+  }
+
+  .reviews-subtitle {
+    font-size: 1rem;
+  }
+
+  .review-card {
+    flex-basis: 85%;
+  }
+
+  .reviews-grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
