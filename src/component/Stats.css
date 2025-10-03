@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .stats__container {
@@ -17,6 +19,8 @@
   width: 100%;
   max-width: 1100px;
   flex-wrap: nowrap;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .stats__item {
@@ -73,26 +77,75 @@
 
 @media (max-width: 900px) {
   .stats__container {
-    gap: 1.2rem;
-    max-width: 98vw;
+    gap: 1.5rem;
+    max-width: 95vw;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
   }
+  
   .stats__item {
-    min-width: 120px;
-    max-width: 98vw;
-    padding: 1.4rem 1rem 1rem 1rem;
+    min-width: 160px;
+    max-width: 200px;
+    padding: 1.8rem 1.5rem 1.2rem 1.5rem;
+  }
+  
+  .stats__number {
+    font-size: 2rem;
+  }
+  
+  .stats__label {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 700px) {
+  .stats {
+    padding: 50px 0 40px 0;
+  }
+  
   .stats__container {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
+  
+  .stats__item {
+    width: 85vw;
+    min-width: 250px;
+    max-width: 320px;
+    margin-bottom: 0;
+    padding: 1.5rem 1.2rem 1rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    padding: 40px 0 30px 0;
+  }
+  
+  .stats__container {
+    padding: 0 0.8rem;
+  }
+  
   .stats__item {
     width: 90vw;
     min-width: 0;
-    max-width: 98vw;
-    margin-bottom: 0;
+    padding: 1.3rem 1rem;
+  }
+  
+  .stats__number {
+    font-size: 1.8rem;
+  }
+  
+  .stats__label {
+    font-size: 0.9rem;
+  }
+  
+  .stats__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 }

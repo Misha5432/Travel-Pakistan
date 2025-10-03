@@ -1,13 +1,14 @@
 
 .home-hero {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .home-overlay {
@@ -24,6 +25,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .home-tagline {
@@ -144,20 +148,84 @@
 
 
 @media (max-width: 900px) {
-  .home-tagline {
-    font-size: 2rem;
+  .home-center-content {
+    padding: 0 1.5rem;
   }
+  
+  .home-tagline {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-subtagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
   .home-searchbar {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.7rem;
-    padding: 1.2rem 1rem;
+    gap: 1rem;
+    padding: 1.5rem 1.2rem;
+    width: 95%;
+    max-width: 450px;
+    margin: 0 auto;
   }
+  
   .home-input-group {
     margin-right: 0;
+    margin-bottom: 0.5rem;
   }
+  
   .home-search-btn {
     width: 100%;
     margin-left: 0;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-center-content {
+    padding: 0 1rem;
+  }
+  
+  .home-tagline {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .home-subtagline {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-center-content {
+    padding: 0 0.8rem;
+  }
+    
+  .home-tagline {
+    font-size: 1.8rem;
+  }
+  
+  .home-subtagline {
+    font-size: 1rem;
+  }
+  
+  .home-searchbar {
+    padding: 1.2rem 1rem;
+    width: 98%;
+    gap: 0.8rem;
+  }
+  
+  .home-input {
+    font-size: 0.95rem;
+    min-width: 70px;
+  }
+  
+  .home-search-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
   }
 }

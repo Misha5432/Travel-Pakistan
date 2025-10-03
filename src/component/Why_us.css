@@ -9,6 +9,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .whyus__heading {
@@ -19,6 +21,9 @@
   text-align: center;
   margin-bottom: 2.5rem;
   text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  max-width: 1000px;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .whyus__cards {
@@ -29,6 +34,8 @@
   width: 100%;
   max-width: 1100px;
   flex-wrap: wrap;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .whyus__card {
@@ -101,27 +108,83 @@
 }
 
 @media (max-width: 900px) {
-  .whyus__cards {
-    gap: 0.7rem;
-    max-width: 98vw;
+  .whyus {
+    padding: 50px 0 60px 0;
   }
+  
+  .whyus__heading {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .whyus__cards {
+    gap: 1rem;
+    max-width: 95vw;
+    padding: 0 1.5rem;
+  }
+  
   .whyus__card {
-    min-width: 140px;
-    max-width: 98vw;
-    padding: 1.1rem 0.7rem 0.9rem 0.7rem;
+    min-width: 160px;
+    max-width: 220px;
+    padding: 1.3rem 1rem 1rem 1rem;
   }
 }
 
 @media (max-width: 700px) {
+  .whyus {
+    padding: 40px 0 50px 0;
+  }
+  
+  .whyus__heading {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  
   .whyus__cards {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    padding: 0 1rem;
   }
+  
+  .whyus__card {
+    width: 85vw;
+    min-width: 250px;
+    max-width: 320px;
+    margin-bottom: 0;
+    padding: 1.2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyus {
+    padding: 35px 0 45px 0;
+  }
+  
+  .whyus__heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+    padding: 0 0.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .whyus__cards {
+    padding: 0 0.8rem;
+  }
+  
   .whyus__card {
     width: 90vw;
     min-width: 0;
-    max-width: 98vw;
-    margin-bottom: 0;
+    padding: 1.1rem 0.9rem;
+  }
+  
+  .whyus__card-title {
+    font-size: 1rem;
+  }
+  
+  .whyus__card-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }

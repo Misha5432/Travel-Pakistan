@@ -1,34 +1,21 @@
 .footer {
-        background: #2D5F3F;
-        color: #f7f8fa;
-        padding: 3.5rem 0 0 0;
-        font-family: 'Segoe UI', Arial, sans-serif;
-      }
-      .footer__container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2vw;
-        justify-content: space-between;
-      }
-      .footer__section {
-        flex: 1 1 220px;
-        min-width: 200px;
-        margin-bottom: 2.5rem;
-      }
-      .footer__brand {
-        max-width: 320px;
-      }
-      .footer__title {
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #fcc61d; 
-        margin-bottom: 0.7rem;
-        letter-spacing: 1px;
-      }
+  background: #2D5F3F;
+  color: #f7f8fa;
+  padding: 3.5rem 0 0 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
       .footer__tagline {
         font-size: 1.05rem;
         color: #e5e7eb;
@@ -146,28 +133,51 @@
         .footer__container {
           flex-wrap: wrap;
           gap: 1.5rem;
+          padding: 0 1.5rem;
         }
         .footer__section {
           min-width: 160px;
         }
+        .footer__title {
+          font-size: 1.8rem;
+        }
       }
+
       @media (max-width: 700px) {
         .footer__container {
           flex-direction: column;
           gap: 2.2rem;
-          padding: 0 4vw;
+          padding: 0 1.5rem;
         }
         .footer__section {
           min-width: 0;
           margin-bottom: 1.2rem;
         }
-        .footer__instagrid {
-          grid-template-columns: repeat(3, 28px);
-          grid-template-rows: repeat(2, 28px);
-        }
         .footer__bottom {
           flex-direction: column;
           gap: 0.7rem;
           font-size: 0.93rem;
+          text-align: center;
+          padding: 1rem 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .footer {
+          padding-top: 2.5rem;
+        }
+        .footer__container {
+          padding: 0 1rem;
+        }
+        .footer__form {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+        .footer__btn {
+          width: 100%;
+        }
+        .footer__legal {
+          flex-direction: column;
+          gap: 0.5rem;
         }
       }
